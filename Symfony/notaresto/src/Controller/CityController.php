@@ -54,7 +54,7 @@ public function edit(City $city){
  * @Route ("/city/{city}", name="city_delete", methods={"DELETE"})
  * @param City $city
  */
-public function delete(City, $city){
+public function delete(City $city){
     
 }
 

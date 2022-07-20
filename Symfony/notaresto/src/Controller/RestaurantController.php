@@ -14,7 +14,7 @@ class RestaurantController extends AbstractController
     
     /**
      * Afficher la liste des restaurants
-     * @Route("/restaurants", name="restaurant_index", methods="GET")
+     * @Route("/restaurants", name="restaurant_index", methods={"GET"})
      */
     public function index(): Response
     {
@@ -36,14 +36,14 @@ class RestaurantController extends AbstractController
 
     /**
      * Création d'un nouveau restaurant : afficher le formulaire
-     * @Route("restaurant/nex", name="restaurant_new", methods={"GET"})
+     * @Route("restaurant/new", name="restaurant_new", methods={"GET"})
      */
     public function new(){
 
     }
 
     /**
-     * Traite la reqsuête d'un formulaire de création de restaurant
+     * Traite la requête d'un formulaire de création de restaurant
      * @Route("/restaurant", name="restaurant_create", methods={"POST"})
      */
     public function create(){
@@ -53,7 +53,7 @@ class RestaurantController extends AbstractController
     /**
      * Affiche le forumaire d'édition d'un restaurant(GET)
      * Traite le forumlaire d'édition d'un restaurant(POST) 
-     * @Route("/restaurant/{restaurant}/edit, name="restaurant_edit", methods={"GET", "POST"})
+     * @Route("/restaurant/{restaurant}/edit", name="restaurant_edit", methods={"GET", "POST"})
      * @param Restaurant $restaurant
      */
 
@@ -63,12 +63,12 @@ class RestaurantController extends AbstractController
 
      /**
       * Supprime un restaurant
-      * @Route("restaurant/{restaurant}/delete, name="restaurant_delete", methods={"DELETE"})
+      * @Route("restaurant/{restaurant}/delete", name="restaurant_delete", methods={"DELETE"})
       * @param Restaurant $restaurant
       */
 
       public function delete(Restaurant $restaurant) {
-        
+
       }
 
 
