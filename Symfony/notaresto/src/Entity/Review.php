@@ -37,6 +37,7 @@ class Review
 
     public function __construct()
     {
+        $this->setCreatedAt(new \DateTime());
         $this->childs = new ArrayCollection();
     }
 
